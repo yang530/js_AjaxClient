@@ -29,10 +29,22 @@ AjaxClient is a general purpose client side Javascript API class which makes xhr
 5. "callback" must be a function that accepts a single (ONE) paremeter. Such as: function func (resData){//something...}.
 6. "inData" would be sent as urlencoded string like : param1="something"&param2="something"&param3="something" if obj2urlencode is set to true while AjaxClient was instantiated.
 
-## Example 1, ajaxGet from URL
+## Examples
 
+### Example 1, ajaxGet from URL
 
+import {AjaxClient} from "../jslib/AjaxClient.js";
 
+const client = new AjaxClient();
+
+//fetch the geo location information based on user's IP address
+//the target URL is an FREE web api which returns geo location based on user's IP address
+client.ajaxGet("https://ipapi.co/json/", printGeoInfo);
+
+function printGeoInfo(geoInfo){
+  //prints response on the console
+  console.log(geoInfo);
+}
 
 
 
