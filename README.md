@@ -33,6 +33,7 @@ AjaxClient is a general purpose client side Javascript API class which makes xhr
 
 ### Example 1, ajaxGet from URL
 
+```
 import {AjaxClient} from "../jslib/AjaxClient.js";
 
 const client = new AjaxClient();
@@ -45,6 +46,7 @@ function printGeoInfo(geoInfo){
   //prints response on the console
   console.log(geoInfo);
 }
+```
 
 
 
