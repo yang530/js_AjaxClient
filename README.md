@@ -31,11 +31,12 @@ AjaxClient is a general purpose client side Javascript API class which makes xhr
 
 ## Examples
 
-### Example 1, ajaxGet from URL
+### Example 1: ajaxGet from URL
 
 ```
 import {AjaxClient} from "../jslib/AjaxClient.js";
 
+//obj2urlencode is false by default
 const client = new AjaxClient();
 
 //fetch the geo location information based on user's IP address
@@ -48,5 +49,28 @@ function printGeoInfo(geoInfo){
 }
 ```
 
+### Example 2: ajaxPost to backend and execute PHP script
+
+```
+import {AjaxClient} from "../jslib/AjaxClient.js";
+
+let loginData = {
+  userName: "user101",
+  password: "123456"
+};
+
+//convert loginData to urlencoded string before sending
+const client = new AjaxClient(true);
+
+//process_login.php receives data from loginData and accesses database to authenticate login information
+//response will indicate whether login is successful
+client.ajaxGet("php/process_login.php", loginData, printResponse);
+
+function printResponse(){
+  //prints response on the console
+  console.log(geoInfo);
+}
+
+```
 
 
