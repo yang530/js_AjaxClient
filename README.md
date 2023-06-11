@@ -67,9 +67,9 @@ const client = new AjaxClient(true);
 //you could reference: https://github.com/yang530/7seg_display/blob/main/php/process_login.php for an example of process_login.php file 
 client.ajaxGet("php/process_login.php", loginData, printResponse);
 
-function printResponse(){
+function printResponse(response){
   //prints response on the console
-  console.log(geoInfo);
+  console.log(response);
 }
 
 ```
