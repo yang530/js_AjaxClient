@@ -1,7 +1,7 @@
 export class AjaxClient{
 
     //bool is either true / false
-    //obj2urlencode indicate whether to convert inData to urlencoded string before sending
+    //obj2urlencode indicates whether to convert inData to urlencoded string before sending
     //urlencoded string such as: param1="something"&param2="something"&param3="something"
     constructor(bool=false){
         this.obj2urlencode = bool;
@@ -57,6 +57,7 @@ export class AjaxClient{
 
         request.open(action.toString(), url.toString(), true);
         request.setRequestHeader("Content-type", headerStr);
+        //add following lines of code to avoid blocks by CORS policy of browser
         //request.setRequestHeader("Access-Control-Allow-Headers", "*");
         //request.setRequestHeader("Access-Control-Allow-Origin", "*");
 
