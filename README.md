@@ -64,6 +64,7 @@ const client = new AjaxClient(true);
 
 //process_login.php receives data from loginData and accesses database to authenticate login information
 //response will indicate whether login is successful
+//you could reference: https://github.com/yang530/7seg_display/blob/main/php/process_login.php for an example of process_login.php file 
 client.ajaxGet("php/process_login.php", loginData, printResponse);
 
 function printResponse(){
