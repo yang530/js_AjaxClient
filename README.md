@@ -19,6 +19,7 @@ AjaxClient is a general purpose client side Javascript API class which makes xhr
 2. parameter "url" is the target URL. "url" must be a string: url="path/to/file". Can be a internet URL, relative file path to a JSON file or a PHP file etc.
 3. this function passes the result of the request to callback function via the callback function given via the parameter "callback".
 4. "callback" must be a function that accepts a single (ONE) paremeter. Such as: function func (resData){//something...}.
+5. AjaxClient will execute the callback function after the GET/POST operation is completed.
 
 ### ajaxPost(url, inData, callback)
 
@@ -43,6 +44,7 @@ const client = new AjaxClient();
 //the target URL is an FREE web api which returns geo location based on user's IP address
 client.ajaxGet("https://ipapi.co/json/", printGeoInfo);
 
+//this function defines what to do after a response is received from the API
 function printGeoInfo(geoInfo){
   //prints response on the console
   console.log(geoInfo);
