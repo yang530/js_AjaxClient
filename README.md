@@ -29,7 +29,7 @@ AjaxClient is a general purpose client side Javascript API class which makes xhr
 4. this function passes the result of the request to callback function via the callback function given via the parameter "callback".
 5. "callback" must be a function that accepts a single (ONE) paremeter. Such as: function func (resData){//something...}.
 6. "inData" would be sent as urlencoded string like : param1="something"&param2="something"&param3="something" if obj2urlencode is set to true while AjaxClient was instantiated.
-7. AjaxClient will execute the callback function after the GET operation is completed.
+7. AjaxClient will execute the callback function after the POST operation is completed.
 
 ## Examples
 
