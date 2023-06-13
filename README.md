@@ -35,7 +35,7 @@ AjaxClient is a general purpose client side Javascript API class which makes xhr
 
 ### Example 1: ajaxGet from URL
 
-```ruby
+```
 import {AjaxClient} from "../jslib/AjaxClient.js";
 
 //obj2urlencode is false by default
@@ -54,7 +54,7 @@ function printGeoInfo(geoInfo){
 
 ### Example 2: ajaxPost to backend and execute PHP script
 
-```ruby
+```
 import {AjaxClient} from "../jslib/AjaxClient.js";
 
 let loginData = {
