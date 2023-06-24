@@ -1,5 +1,5 @@
 # js_AjaxClient
-AjaxClient is a general purpose client side Javascript API class which makes xhr requests to backend or url and then relays response to front end. It is capable of both GET and POST operations.
+AjaxClient is a general purpose client side Javascript API class which makes xhr requests to backend or url and then relays response to front end via Javascript promise. It is capable of both GET and POST operations.
 
 # Documentation:
 
